@@ -24,10 +24,10 @@ void sort_artefak(artefak arr[], int n){
     for(int i = 0; i < n-1; i++){
         for(int j = 0; j < n-i-1; j++){
             if(
-                (strcmp(arr[j].kategori, arr[j+1].kategori) < 0) || 
-                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun < arr[j+1].tahun) || 
+                (strcmp(arr[j].kategori, arr[j+1].kategori) > 0) || 
+                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun > arr[j+1].tahun) || 
                 (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai > arr[j+1].nilai) || 
-                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai == arr[j+1].nilai && strcmp(arr[j].nama, arr[j+1].nama) < 0)
+                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai == arr[j+1].nilai && strcmp(arr[j].nama, arr[j+1].nama) > 0)
             ){
                 artefak temp = arr[j];
                 arr[j] = arr[j+1];
@@ -38,7 +38,7 @@ void sort_artefak(artefak arr[], int n){
     }
 
     for(int i = 0; i < n; i++){
-        printf("%s %s %d %d", arr[i].nama, arr[i].kategori, arr[i].tahun, arr[i].nilai);
+        printf("%s %s %d %d\n", arr[i].nama, arr[i].kategori, arr[i].tahun, arr[i].nilai);
     }
 }
 
