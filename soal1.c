@@ -27,7 +27,7 @@ void sort_artefak(artefak arr[], int n){
                 (strcmp(arr[j].kategori, arr[j+1].kategori) > 0) || 
                 (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun > arr[j+1].tahun) || 
                 (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai > arr[j+1].nilai) || 
-                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai == arr[j+1].nilai && strcmp(arr[j].nama, arr[j+1].nama) > 0)
+                (strcmp(arr[j].kategori, arr[j+1].kategori) == 0 && arr[j].tahun == arr[j+1].tahun && arr[j].nilai == arr[j+1].nilai && strcmp(arr[j].nama, arr[j+1].nama) < 0)
             ){
                 artefak temp = arr[j];
                 arr[j] = arr[j+1];
